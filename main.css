@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.background {
+    background-color: rgb(237, 237, 237);
+    padding-top: 40px;
+}
+
+header {
+    background-color: rgb(56, 103, 213);
+    color: #fff;
+    padding: 16px;        
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .container h1 {
+    font-style: italic;
+}
+
+header li {
+    display: inline-block;
+    margin-left: 16px;    
+}
+
+header li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.sobre {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    margin-bottom: 70px;
+}
+
+.sobre h2,
+.container > h2 {
+    color: rgb(56, 103, 213);
+    padding-bottom: 16px;
+    margin-bottom: 40px;
+    border-bottom: 2px solid rgb(56, 103, 213);
+}
+
+.produto > h2 {
+    color: rgb(56, 103, 213);
+}
+
+img{
+    width: 100%;
+}
+
+article { 
+    height: 100%;
+}
+
+.sobre article {
+    margin-left: 40px;
+}
+
+.loja {
+    display: grid;
+    grid-template-columns: repeat(4, 24.25%);
+    column-gap: 1%;
+    row-gap: 5%;
+}
+
+.loja img {
+    margin-bottom: 60px;
+}
+
+.loja h2 {
+    padding-bottom: 24px;
+}
+
+button {
+    width: 100%;
+    background-color: rgb(56, 103, 213);
+    color: #fff;
+    border: none;
+    margin-top: 18px;
+    margin-bottom: 36px;
+    padding: 10px 0;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor:pointer;
+}
+
+@media screen and (max-width: 640px) {
+    .container {
+        max-width: 512px;
+        width: 80vw;
+    }
+
+    header li {
+        display: block;
+    }
+
+    .sobre > img {
+        margin-bottom: 18px;
+    }
+
+    .sobre {
+        display: block;
+        margin-bottom: 70px;
+    }
+
+    .sobre h2 {
+        margin-top: 24px;
+    }
+
+    .sobre article {
+        margin-left: 0;
+    }
+
+    .loja {
+        display: block;
+    }
+
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) and (orientation: portrait) {
+    .container {
+        width: 80vw;
+    }
+    .sobre {
+        display: block;
+    }
+
+    .sobre > img {
+        margin-bottom: 18px;
+    }
+
+    .sobre article {
+        margin-left: 0;
+    }
+
+    .loja {
+        display: grid;
+        grid-template-columns: repeat(2, 49.5%);
+        column-gap: 1%;
+        row-gap: 0;
+    }
+}
